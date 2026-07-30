@@ -27,8 +27,8 @@
             overflow: hidden;
         }
         .header {
-            background: #dcbb91;
-            padding: 1rem 0.8rem;
+            background: #dcbb91;   /* 暖奶茶色标题栏 */
+            padding: 1.2rem;
             text-align: center;
             color: #4a2c1a;
         }
@@ -37,22 +37,6 @@
             font-weight: 600;
             font-size: 1.8rem;
             letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: nowrap;
-            white-space: nowrap;
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 0 4px;
-        }
-        .header-img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-            flex-shrink: 0;
-            border-radius: 12px;
         }
         .header p {
             margin: 0.5rem 0 0;
@@ -242,14 +226,7 @@
         }
         @media (max-width: 550px) {
             .content { padding: 1.2rem; }
-            .header h1 {
-                font-size: 1.3rem;
-                gap: 6px;
-            }
-            .header-img {
-                width: 36px;
-                height: 36px;
-            }
+            .header h1 { font-size: 1.5rem; }
             .stat-number { font-size: 1.5rem; }
             .result-number {
                 font-size: 1.2rem;
@@ -266,11 +243,7 @@
 <body>
 <div class="card">
     <div class="header">
-        <h1>
-            <img class="header-img" src="capy_drink.png" alt="capybara drinking">
-            <span>Draw</span>
-            <img class="header-img" src="capy_winter.png" alt="capybara winter">
-        </h1>
+        <h1>Draw</h1>
         <p>Non‑repeating · Exclude numbers · Sorted results</p>
     </div>
     <div class="content">
@@ -294,6 +267,7 @@
             <textarea id="excludeNumbers" rows="2" class="exclude-text" placeholder="e.g., 1, 13, 50"></textarea>
         </div>
 
+        <!-- 奇偶筛选 -->
         <div class="input-field" style="margin-bottom: 1rem;">
             <label>Number type</label>
             <select id="parityFilter">
